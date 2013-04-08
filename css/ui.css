@@ -1,0 +1,179 @@
+/*-------------------------Clearfix-------------------------*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*-------------------------Image replacement-------------------------*/
+.ir {
+	display:block;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*-------------------------Hide visually-------------------------*/
+.visuallyhidden,
+.assistive-text,
+.screen-reader-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*-------------------------Reset-------------------------*/
+h1, h2, h3, h4, h5, h6, p, nav ul {margin:0;padding:0;}
+
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+
+.unlist {list-style:none;}
+
+/*-------------------------Highlight color-------------------------*/
+::-moz-selection {background:#000;}
+::selection {background:#000;}
+
+/*-------------------------Tables-------------------------*/
+table, col.max {width:100%;}
+col.min {width:1px;}
+
+table {border:none;}
+
+th, td {
+	padding:.75em 1em;	
+	background-color:#fff;
+	border:none;
+	border-bottom:1px dotted #ccc;
+}
+
+tr:nth-child(even) td {background-color:hsla(0, 0%, 0%, .1);}
+
+th {
+	font-size:0.75em;
+	font-weight:normal;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	text-align:left;
+	text-transform:uppercase;
+	color:#999;
+}
+
+tr:last-child td {border-bottom:none;}
+
+/*-------------------------Forms-------------------------*/
+input[type="checkbox"] {vertical-align:middle;}
+
+.label-checkbox {cursor:pointer;}
+
+.field {margin-bottom:1em;}
+
+.pseudo-input-text-input,
+.pseudo-button-button {
+	background-color:transparent;
+	border:none;
+}
+
+.pseudo-input-text-input,
+input[type="text"],
+input[type="password"] {width:100%;}
+
+/*-------------------------Pseudo buttons-------------------------*/
+.pseudo-button,
+.pseudo-button-link {display:inline-block;}
+
+.pseudo-button {
+	min-width:64px;
+	background: #222;
+	border-radius:5px;
+	text-align:center;
+}
+
+.pseudo-button-button,
+.pseudo-button-link,
+.pseudo-button-link:hover,
+.pseudo-button-link:visited {color:#fff;}
+
+.pseudo-button-button,
+.pseudo-button-link {padding:.60em 1.5em;}
+
+.pseudo-button-button {width:100%;}
+
+.pseudo-button-button {padding-top:.5em;}
+
+/*-------------------------Skeleton-------------------------*/
+html,
+#colophon {background-color:#222;}
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#222;
+}
+
+#masthead-cr,
+#content-cr,
+#colophon-cr {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	background-color:#fff;
+}
+
+/*-------------------------Links-------------------------*/
+a, a:visited {
+	color:#808080;
+	text-decoration:none;
+}
+
+a:hover {color:#666;}
+
+/*-------------------------Texts-------------------------*/
+.entry-content p {margin-bottom:1em;}
+.entry-content p:last-child, .entry-content p:only-child {margin-bottom:0;}
+
+/*-------------------------Post-------------------------*/
+.post {margin-bottom:2em;}
+
+@media only screen and (min-width: 480px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-width: 600px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-width: 768px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-width: 1024px) {
+    
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}

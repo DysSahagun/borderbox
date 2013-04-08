@@ -1,0 +1,395 @@
+/*
+Theme Name: Border Box
+Author: Dys Sahagun
+Description: An HTML and CSS tandem utilizing the border-box value of the box-sizing property in CSS. HTML and CSS markup from HTML5 Boilerplate.
+Template: twentytwelve
+Version: 1.0
+*/
+
+/*-------------------------Clearfix-------------------------*/
+.clearfix:before,
+.clearfix:after,
+.nav-above:before,
+.nav-above:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after,
+.nav-above:after {
+    clear: both;
+}
+
+.clearfix,
+.nav-above {
+    *zoom: 1;
+}
+
+/*-------------------------Image replacement-------------------------*/
+.site-title-link,
+#searchsubmit,
+.nav-previous a,
+.nav-next a {
+	display:block;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.site-title-link:before,
+#searchsubmit:before,
+.nav-previous a:before,
+.nav-next a:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+#searchsubmit {text-indent: -9999px;}
+
+/*-------------------------Hide visually-------------------------*/
+.site-desc,
+.entry-header .comments-link,
+.widget-title {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*-------------------------Reset-------------------------*/
+.widget ul,
+#s {margin:0;padding:0;}
+
+#s,
+#searchsubmit {
+	background-color:transparent;
+	border:none;
+}
+
+.widget ul {list-style:none;}
+
+/*-------------------------Type-------------------------*/
+body,
+input[type="text"],
+input[type="password"] {font-family:'Sanchez', Arial, Helvetica, sans-serif;}
+
+/*-------------------------Box-sizing-------------------------*/
+#s,
+.teleport-ct {	
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*-------------------------Skeleton-------------------------*/
+#masthead-cr,
+#content-cr,
+#colophon-cr,
+.teleport-cr {
+	margin:0 auto;
+	max-width:1280px;
+}
+
+html,
+#colophon {
+	background-color:#2b1b16;
+	background-color:hsla(14, 32%, 13%, 1);
+}
+
+body,
+a, a:visited,
+.entry-content a:hover,
+.entry-meta a:hover,
+#s:focus {
+	color:#2b1b16;
+	color:hsla(14, 32%, 13%, 1); /* Dark brown */
+}
+
+.wp-caption-text {color:hsla(14, 32%, 13%, 1);}
+
+#masthead-cr,
+#content-cr,
+#colophon-cr {
+	background-color:#eceae1;
+	background-color:hsla(49, 22%, 90%, 1); /* Old white */
+}
+
+.entry-meta .comments-link > a, .entry-meta .comments-link > a:visited,
+.entry-meta .post-edit-link, .entry-meta .post-edit-link:visited {
+	color:#eceae1;
+	color:hsla(49, 22%, 90%, 1);
+}
+
+/*-------------------------Links-------------------------*/
+.entry-content a, .entry-content a:visited,
+.entry-meta a, .entry-meta a:visited,
+.entry-date-header,
+#s {color:hsla(26, 6%, 51%, 1);} /* Light brown */
+
+/*-------------------------Buttons-------------------------*/
+.comments-link > a {
+	display:inline-block;
+	padding:.15em .65em;
+	background-color:#b0a8a4;
+	border-radius:3px;
+}
+
+.post-edit-link {
+	display:inline-block;
+	padding:.15em .65em;
+	background-color:#b0a8a4;
+	border-radius:3px;
+}
+
+/*-------------------------Site title-------------------------*/
+.site-title-link {
+	width:256px;
+	height:50px;
+	background-image:url(img/ass-logo.png);
+}
+
+/*-------------------------Menu-------------------------*/
+.menu-toggle {display: none;}
+
+/*-------------------------Lines-------------------------*/
+.entry-header {border-bottom:1px solid hsla(20, 7%, 67%, .5);}
+
+.widget_categories,
+#s {border-top:1px solid hsla(20, 7%, 67%, .5);}
+
+#s {border-bottom:1px solid hsla(20, 7%, 67%, .5);}
+
+/*-------------------------Entry-------------------------*/
+.entry-content {
+	font-size:1.125em;
+	line-height:1.5;
+}
+
+.entry-header {
+	margin-bottom:1em;
+	padding-bottom:.5em;
+}
+
+.entry-title {font-size:1.875em;}
+
+.wp-caption,
+.entry-content img {
+	max-width:100%;
+	height:auto;
+}
+
+/*-------------------------Caption-------------------------*/
+.wp-caption-text {
+	margin:.5em .5em 0;
+	font-size:.75em;
+}
+
+/*-------------------------Entry meta-------------------------*/
+.entry-meta,
+.comments-link {margin-top:1.5em;}
+
+.entry-meta {font-style:italic;}
+
+/*-------------------------Comments-------------------------*/
+.comments-link,
+.post-edit-link {font-style:normal;}
+
+/*-------------------------Post navigation-------------------------*/
+.nav-previous,
+.nav-next {float:left;}
+
+.nav-previous:empty,
+.nav-next:empty,
+.nav-previous a,
+.nav-next a {
+	width:48px;
+	height:48px;
+	background-image:url(img/arrow-icons.png);
+	opacity:.75;
+}
+
+.nav-previous a:hover,
+.nav-next a:hover {opacity:1;}
+
+.nav-previous:empty,
+.nav-previous a {background-position:0 0;}
+
+.nav-next:empty,
+.nav-next a {background-position:-48px 0;}
+
+.nav-previous:empty,
+.nav-next:empty {opacity:.25;}
+
+.nav-previous {margin-right:1em;}
+
+/*-------------------------Search-------------------------*/
+#searchform {position:relative;}
+
+#s {padding:.35em 2em .35em .75em;}
+
+#searchsubmit {
+	position:absolute;
+	top:50%;
+	right:8px;
+	margin-top:-8px;
+}
+
+#searchsubmit {
+	width:16px;
+	height:16px;
+	background-image:url(img/icons.png);
+}
+
+/*-------------------------Footer-------------------------*/
+#colophon-cr {font-size:.875em;}
+
+/*-------------------------Widgets-------------------------*/
+.widget {margin-bottom:1em;}
+.widget_categories {text-align:center;}
+
+.widget_categories {padding-top:1em;}
+
+.widget_recent_entries li,
+.cat-item {margin-bottom:.5em;}
+
+.cat-item:last-child {margin-bottom:0;}
+
+@media only screen and (min-width: 1024px) {
+    
+	/*-------------------------Clearfix-------------------------*/
+	.entry-header:before,
+	.entry-header:after,
+	#content-cr:before,
+	#content-cr:after,
+	.teleport-cr:before,
+	.teleport-cr:after,
+	.colophon-teleport .teleport-ct:before,
+	.colophon-teleport .teleport-ct:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	
+	.entry-header:after,
+	#content-cr:after,
+	.teleport-cr:after,
+	.colophon-teleport .teleport-ct:after {
+		clear: both;
+	}
+	
+	.entry-header,
+	#content-cr,
+	.teleport-cr,
+	.colophon-teleport .teleport-ct {
+		*zoom: 1;
+	}
+	
+	/*-------------------------Skeleton-------------------------*/
+	#pri,
+	.post-nav-teleport .teleport-ct,
+	.colophon-teleport .teleport-ct {
+		float:right;
+		width:75%;
+	}
+	
+	#pri-cr {padding:6em 9em 2em 4em;}
+	
+	#sec,
+	.site-info-head-teleport .teleport-ct,
+	.widget-teleport .teleport-ct,
+	.main-nav-teleport .teleport-ct {
+		float:left;
+		width:25%;
+	}
+	
+	#sec-cr,
+	.widget-teleport .teleport-ct {padding:2em;}
+
+	/*-------------------------Main navigation-------------------------*/
+	
+	.nav-menu > ul > li {
+		display:inline-block;
+		margin-right:2em;
+		font-size:.875em;
+	}
+	
+	.nav-menu > ul > li:last-child {margin-right:0;}
+	
+	/*-------------------------Teleport-------------------------*/
+	.teleport {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+	}
+	
+	.teleport-ct .navigation {
+		float:right;
+		margin:1em 1em 0 0;
+	}
+	
+	.teleport-ct .site-info-head {margin:2em 0 0 2em;}
+	
+	.widget-teleport .teleport-ct {margin-top:5em;}
+	
+	.colophon-teleport,
+	.main-nav-teleport {
+		top:auto;
+		bottom:0;
+	}
+	
+	.main-nav-teleport .teleport-ct,
+	.colophon-teleport .teleport-ct {padding:.5em 2em;}
+	
+	.colophon-teleport .teleport-ct {text-align:right;}
+	
+	/*-------------------------Entry header-------------------------*/
+	.entry-title {
+		float:left;
+		width:80%;
+	}
+	
+	.entry-date-header {
+		float:right;
+		margin-top:1em;
+		width:20%;
+		text-align:right;
+	}
+
+	/*-------------------------Footer-------------------------*/	
+	.colophon-teleport .teleport-ct {
+		background-color:#eceae1;
+		background-color:hsla(49, 22%, 90%, 1);
+	}
+	
+	.colophon-teleport .teleport-ct p {display:inline-block;}
+	.copyright {margin-right:1em;}
+	
+	/*-------------------------Stack-------------------------*/
+	.teleport-ct .main-navigation,
+	.colophon-teleport .teleport-ct {
+		position:relative;
+		z-index:3;
+	}
+	
+	#pri-cr,
+	.teleport-ct .site-info-head {
+		position:relative;
+		z-index:2;
+	}
+	
+	.teleport-ct .widget-ct,
+	.teleport-ct .navigation {
+		position:relative;
+		z-index:1;
+	}
+	
+	
+}
