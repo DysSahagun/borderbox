@@ -11,8 +11,8 @@
  */
 ?>
 
-                </div>
-            </div><!--#content-->
+                </div>                
+            </div><!--#main-->
             
             <footer id="colophon" role="contentinfo">
                 <div id="colophon-cr">
@@ -35,7 +35,15 @@
                 </div>
             </footer><!--#colophon-->
         
-        </div><!--#page-->		
+        </div><!--#page-->
+        
+        <div class="teleport letterbox-teleport">
+            <div class="teleport-cr">
+                <div class="teleport-ct">
+                    <span class="letterbox"></span>
+                </div>
+            </div>
+        </div>        
 
 		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/plugins.js"></script>
         <?php wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/main.js', array('jquery','modernizr'), false); ?>

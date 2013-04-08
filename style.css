@@ -9,19 +9,23 @@ Version: 1.0
 /*-------------------------Clearfix-------------------------*/
 .clearfix:before,
 .clearfix:after,
-.nav-above:before,
-.nav-above:after {
+#nav-above:before,
+#nav-above:after,
+.nav-single:before,
+.nav-single:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
 .clearfix:after,
-.nav-above:after {
+#nav-above:after,
+.nav-single:after {
     clear: both;
 }
 
 .clearfix,
-.nav-above {
+#nav-above,
+.nav-single {
     *zoom: 1;
 }
 
@@ -91,7 +95,7 @@ input[type="password"] {font-family:'Sanchez', Arial, Helvetica, sans-serif;}
 
 /*-------------------------Skeleton-------------------------*/
 #masthead-cr,
-#content-cr,
+#main-cr,
 #colophon-cr,
 .teleport-cr {
 	margin:0 auto;
@@ -116,7 +120,7 @@ a, a:visited,
 .wp-caption-text {color:hsla(14, 32%, 13%, 1);}
 
 #masthead-cr,
-#content-cr,
+#main-cr,
 #colophon-cr {
 	background-color:#eceae1;
 	background-color:hsla(49, 22%, 90%, 1); /* Old white */
@@ -132,7 +136,8 @@ a, a:visited,
 .entry-content a, .entry-content a:visited,
 .entry-meta a, .entry-meta a:visited,
 .entry-date-header,
-#s {color:hsla(26, 6%, 51%, 1);} /* Light brown */
+#s,
+.search .page-title {color:hsla(26, 6%, 51%, 1);} /* Light brown */
 
 /*-------------------------Buttons-------------------------*/
 .comments-link > a {
@@ -230,6 +235,9 @@ a, a:visited,
 
 .nav-previous {margin-right:1em;}
 
+/*-------------------------Page-------------------------*/
+.page-header {margin-bottom:2em;}
+
 /*-------------------------Search-------------------------*/
 #searchform {position:relative;}
 
@@ -248,8 +256,13 @@ a, a:visited,
 	background-image:url(img/icons.png);
 }
 
+/*-------------------------Search page-------------------------*/
+.search .page-title > span {font-style:italic;}
+
 /*-------------------------Footer-------------------------*/
 #colophon-cr {font-size:.875em;}
+
+.colophon-teleport .colophon-ct * {color:hsla(14, 32%, 13%, .5);}
 
 /*-------------------------Widgets-------------------------*/
 .widget {margin-bottom:1em;}
@@ -267,8 +280,8 @@ a, a:visited,
 	/*-------------------------Clearfix-------------------------*/
 	.entry-header:before,
 	.entry-header:after,
-	#content-cr:before,
-	#content-cr:after,
+	#main-cr:before,
+	#main-cr:after,
 	.teleport-cr:before,
 	.teleport-cr:after,
 	.colophon-teleport .teleport-ct:before,
@@ -278,28 +291,28 @@ a, a:visited,
 	}
 	
 	.entry-header:after,
-	#content-cr:after,
+	#main-cr:after,
 	.teleport-cr:after,
 	.colophon-teleport .teleport-ct:after {
 		clear: both;
 	}
 	
 	.entry-header,
-	#content-cr,
+	#main-cr,
 	.teleport-cr,
 	.colophon-teleport .teleport-ct {
 		*zoom: 1;
 	}
 	
 	/*-------------------------Skeleton-------------------------*/
-	#pri,
+	#primary,
 	.post-nav-teleport .teleport-ct,
 	.colophon-teleport .teleport-ct {
 		float:right;
 		width:75%;
 	}
 	
-	#pri-cr {padding:6em 9em 2em 4em;}
+	#content {padding:6em 9em 2em 4em;}
 	
 	#sec,
 	.site-info-head-teleport .teleport-ct,
@@ -330,7 +343,8 @@ a, a:visited,
 		width:100%;
 	}
 	
-	.teleport-ct .navigation {
+	.teleport-ct #nav-above,
+	.teleport-ct .nav-single {
 		float:right;
 		margin:1em 1em 0 0;
 	}
@@ -350,6 +364,15 @@ a, a:visited,
 	
 	.colophon-teleport .teleport-ct {text-align:right;}
 	
+	.letterbox-teleport {height:100%;}
+	
+	.letterbox {
+		position:absolute;
+		width:1280px;
+		height:100%;
+		background-color:hsla(49, 22%, 90%, 1); /* Old white */
+	}
+	
 	/*-------------------------Entry header-------------------------*/
 	.entry-title {
 		float:left;
@@ -364,7 +387,8 @@ a, a:visited,
 	}
 
 	/*-------------------------Footer-------------------------*/	
-	.colophon-teleport .teleport-ct {
+	.colophon-teleport .teleport-ct,
+	.main-nav-teleport .teleport-ct {
 		background-color:#eceae1;
 		background-color:hsla(49, 22%, 90%, 1);
 	}
@@ -379,14 +403,13 @@ a, a:visited,
 		z-index:3;
 	}
 	
-	#pri-cr,
+	#content,
 	.teleport-ct .site-info-head {
 		position:relative;
 		z-index:2;
 	}
 	
-	.teleport-ct .widget-ct,
-	.teleport-ct .navigation {
+	.teleport-ct .widget-ct {
 		position:relative;
 		z-index:1;
 	}

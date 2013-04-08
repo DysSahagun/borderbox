@@ -80,5 +80,5 @@
                 </div>
             </header><!--#branding-->
             
-            <div id="content" role="main">
-                <div id="content-cr">
+            <div id="main">
+                <div id="main-cr">

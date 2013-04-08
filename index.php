@@ -16,8 +16,8 @@
 
 get_header(); ?>
 
-                    <div id="pri" class="site-content">
-                        <div id="pri-cr">
+                    <div id="primary" class="site-content">
+                        <div id="content" role="main">
                         
                         <?php if ( have_posts() ) : ?>
 
