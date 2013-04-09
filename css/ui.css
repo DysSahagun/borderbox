@@ -47,13 +47,7 @@
 /*-------------------------Reset-------------------------*/
 h1, h2, h3, h4, h5, h6, p, nav ul {margin:0;padding:0;}
 
-h1, h2, h3, h4, h5, h6 {font-weight:normal;}
-
 .unlist {list-style:none;}
-
-/*-------------------------Highlight color-------------------------*/
-::-moz-selection {background:#000;}
-::selection {background:#000;}
 
 /*-------------------------Tables-------------------------*/
 table, col.max {width:100%;}
@@ -97,7 +91,8 @@ input[type="checkbox"] {vertical-align:middle;}
 
 .pseudo-input-text-input,
 input[type="text"],
-input[type="password"] {width:100%;}
+input[type="password"],
+textarea {width:100%;}
 
 /*-------------------------Pseudo buttons-------------------------*/
 .pseudo-button,
@@ -151,9 +146,6 @@ a:hover {color:#666;}
 /*-------------------------Texts-------------------------*/
 .entry-content p {margin-bottom:1em;}
 .entry-content p:last-child, .entry-content p:only-child {margin-bottom:0;}
-
-/*-------------------------Post-------------------------*/
-.post {margin-bottom:2em;}
 
 @media only screen and (min-width: 480px) {
     /* Style adjustments for viewports that meet the condition */

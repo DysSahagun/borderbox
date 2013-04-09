@@ -36,11 +36,14 @@
             </footer><!--#colophon-->
         
         </div><!--#page-->
-        
         <div class="teleport letterbox-teleport">
             <div class="teleport-cr">
                 <div class="teleport-ct">
-                    <span class="letterbox"></span>
+                    <span class="letterbox">
+                        <span class="insert insert-one"></span>
+                        <span class="insert insert-two"></span>
+                        <a id="top-link" href="#" target="_top" title="Back to top">Back to top</a>
+                    </span>
                 </div>
             </div>
         </div>        
